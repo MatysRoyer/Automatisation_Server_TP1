@@ -50,7 +50,7 @@ foreach($group in $getAllGroup) {
             $groupName = $group.DisplayName
 
             Set-GPRegistryValue -Name $nomGPOForUSB -Key "HKLM\SYSTEM\CurrentControlSet\Services\USBSTOR" -ValueName "Start" -Type DWord -Value 4 -Context Machine -PropertyType Registry
-            Write-Host "USB ports blocked for $($group.Name)"
+            Write-Host "USB ports blocked for $($groupName)"
 
         }
     }
